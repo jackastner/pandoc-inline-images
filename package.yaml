@@ -1,0 +1,31 @@
+name:                pandoc-inline-images
+version:             0.1.0.0
+github:              "jackastner/pandoc-inline-images"
+license:             BSD3
+author:              "John Kastner"
+maintainer:          "john.h.kastner@gmail.com"
+copyright:           "2019 John Kastner"
+
+extra-source-files:
+- README.md
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/jackastner/pandoc-inline-images#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- pandoc-types
+- process
+- base64-bytestring
+- bytestring
+
+executables:
+  inline-images:
+    main:                Inline.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
